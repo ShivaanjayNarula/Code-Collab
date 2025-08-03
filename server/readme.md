@@ -1,4 +1,4 @@
-# Pair-Code Backend Server
+# Code-Collab Backend Server
 
 Backend codebase for the collaborative code editor **PairCode**. This repository contains two separate servers:
 
