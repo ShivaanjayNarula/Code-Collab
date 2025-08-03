@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:latest
+    container_name: code-collab-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - code-collab-network
+
+  # Backend API Server
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: code-collab-backend
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=4000
+      - MONGODB_URI=mongodb://admin:password123@mongodb:27017/code-collab?authSource=admin
+      - JWT_SECRET=your-super-secret-jwt-key-change-this
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
+      - EMAIL_USER=${EMAIL_USER}
+      - EMAIL_PASS=${EMAIL_PASS}
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongodb
+    networks:
+      - code-collab-network
+
+  # WebSocket Server
+  websocket:
+    build:
+      context: ./server/websocket
+      dockerfile: Dockerfile
+    container_name: code-collab-websocket
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=4001
+      - API_BASE_URL=http://backend:4000
+      - CORS_ORIGIN=http://localhost:3000
+    ports:
+      - "4001:4001"
+    depends_on:
+      - backend
+    networks:
+      - code-collab-network
+
+  # Frontend Client
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: code-collab-frontend
+    restart: unless-stopped
+    environment:
+      - NEXT_PUBLIC_API_URI=http://localhost:4000
+      - NEXT_PUBLIC_WS_URI=http://localhost:4001
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+      - websocket
+    networks:
+      - code-collab-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  code-collab-network:
+    driver: bridge 
