@@ -1,6 +1,6 @@
 # Code Collab - Real-Time Collaborative Coding Platform
 
-A modern, feature-rich collaborative coding platform that enables real-time code editing, AI-powered code completion, and seamless team collaboration.
+A modern, feature-rich collaborative coding platform that enables real-time code editing, AI-powered code completion, and seamless team collaboration
 
 ![Code Collab](https://img.shields.io/badge/Code-Collab-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-14.0.4-black)
