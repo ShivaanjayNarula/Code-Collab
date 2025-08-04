@@ -1,6 +1,7 @@
 # Code Collab - Real-Time Collaborative Coding Platform
 
-A modern, feature-rich collaborative coding platform that enables real-time code editing, AI-powered code completion, and seamless team collaboration
+A powerful real-time collaborative code editor that enables teams to code together seamlessly from anywhere in the world. Built with Next.js, Node.js, Socket.IO, and MongoDB.
+
 
 ![Code Collab](https://img.shields.io/badge/Code-Collab-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-14.0.4-black)
@@ -10,31 +11,41 @@ A modern, feature-rich collaborative coding platform that enables real-time code
 ![MongoDB](https://img.shields.io/badge/MongoDB-Database-green)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 
-## 🚀 Features
+[//]: # (## 🌟 Live Demo)
 
-### ✨ Core Features
-- **Real-time Collaborative Editing**: Multiple users can edit code simultaneously with live synchronization
+[//]: # ()
+[//]: # (- **Frontend**: [https://code-collab-2025.vercel.app/]&#40;https://code-collab-2025.vercel.app/&#41;)
+
+[//]: # (- **Backend API**: [https://code-collab-yfql.onrender.com/]&#40;https://code-collab-yfql.onrender.com/&#41;)
+
+[//]: # (- **WebSocket Server**: [https://code-collab-websockets.onrender.com/]&#40;https://code-collab-websockets.onrender.com/&#41;)
+
+## ✨ Features
+
+### 🚀 Core Features
+- **Real-time Collaboration**: Code together with your team in real-time
+- **Multi-language Support**: Support for Python, JavaScript, Java, C++, and more
+- **Instant Code Execution**: Run code and see results immediately
+- **Live Code Preview**: See changes as they happen
+- **User Authentication**: Secure signup/login system
+- **Room-based Collaboration**: Create and join collaboration spaces
+- **Active User Tracking**: See who's currently in the room
+
+### 🎯 Advanced Features
 - **AI Code Completion**: Powered by Mistral AI for intelligent code suggestions
-- **Multi-language Support**: Support for various programming languages
-- **Live Code Execution**: Run code directly in the browser with real-time output
-- **User Authentication**: Secure login/signup system with JWT tokens
-- **Active User Tracking**: See who's currently in the collaboration space
-- **Code Language Switching**: Dynamically change programming languages during collaboration
+- **Real-time Cursor Tracking**: See where other users are typing
+- **Code Syntax Highlighting**: Beautiful syntax highlighting for all supported languages
+- **Responsive Design**: Works perfectly on desktop and mobile devices
+- **Dark/Light Theme**: Toggle between themes for comfortable coding
 
-### 🎨 User Experience
-- **Modern UI/UX**: Beautiful, responsive design with dark/light theme support
-- **Real-time Notifications**: Toast notifications for user join/leave events
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Theme Support**: Dark and light mode with system preference detection
+### 🔧 Developer Features
+- **WebSocket Communication**: Real-time bidirectional communication
+- **RESTful API**: Clean and well-documented API endpoints
+- **MongoDB Integration**: Scalable database solution
+- **JWT Authentication**: Secure token-based authentication
+- **Email Notifications**: Welcome emails for new users
 
-### 🔧 Technical Features
-- **WebSocket Integration**: Real-time communication using Socket.io
-- **Monaco Editor**: Professional code editor with syntax highlighting
-- **State Management**: Recoil for efficient state management
-- **Form Validation**: Robust form handling with React Hook Form and Zod
-- **Error Handling**: Comprehensive error handling and user feedback
-
-## 🏗️ Architecture
+## 🏗️ Tech Stack
 
 ### Frontend (Client)
 - **Framework**: Next.js 14 with React 18
@@ -57,6 +68,10 @@ A modern, feature-rich collaborative coding platform that enables real-time code
 - **Real-time Communication**: Handles live code synchronization
 - **Room Management**: Manages collaboration spaces
 - **User Tracking**: Tracks active users in real-time
+
+### AI & Services
+- **Mistral AI** - Code completion and suggestions
+- **MongoDB Atlas** - Cloud database service
 
 ## 📁 Project Structure
 
@@ -89,8 +104,9 @@ Code Collab/
 ### Prerequisites
 - Node.js (v18 or higher)
 - npm, yarn, or pnpm
-- MongoDB database
+- MongoDB Atlas Database
 - Mistral AI API key
+- Git
 
 ### Environment Variables
 
@@ -123,14 +139,14 @@ CORS_ORIGIN=http://localhost:3000
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ShivaanjayNarula/Code-Collab.git
    cd Code-Collab
    ```
 
 2. **Install client dependencies**
    ```bash
    cd client
-   npm install
+   yarn install
    ```
 
 3. **Install server dependencies**
@@ -150,13 +166,13 @@ CORS_ORIGIN=http://localhost:3000
 1. **Start the backend server**
    ```bash
    cd server
-   npm run dev
+   node --watch server.js
    ```
 
 2. **Start the WebSocket server**
    ```bash
    cd server/websocket
-   npm run web-socket
+   node ws-server.js
    ```
 
 3. **Start the frontend application**
