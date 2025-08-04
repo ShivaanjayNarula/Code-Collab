@@ -2,7 +2,7 @@
 
 **Code-Collab** is a modern, real-time collaborative code editor built with Next.js, React, and Socket.io. It enables seamless pair programming, interview practice, and group coding sessions with live code sharing, multi-language support, and instant code execution.
 
-**Live Demo:** [https://mypaircode.vercel.app/](https://mypaircode.vercel.app/)
+**Live Demo:** [https://mypaircode.vercel.app/](https://code-collab-2025.vercel.app/)
 
 ---
 
@@ -50,14 +50,13 @@ This project consists of two codebases: **frontend** (this repo) and **backend**
 ### 1. Clone the repositories
 
 ```bash
-git clone https://github.com/Shivansh-Khunger/Code-Collab.git
-git clone https://github.com/alanJames00/pair-code-backend.git
+git clone https://github.com/Shivaanjay/Code-Collab.git
 ```
 
 ### 2. Install dependencies (Frontend)
 
 ```bash
-cd Code-Collab
+cd client
 pnpm install # or npm install or yarn install
 ```
 
@@ -73,7 +72,7 @@ pnpm dev # or npm run dev or yarn dev
 
 ### 5. Start the backend server
 
-Follow instructions in the backend repo: [pair-code-backend](https://github.com/alanJames00/pair-code-backend)
+Follow instructions in the backend repo: [Code-Collab-backend](https://github.com/ShivaanjayNarula/Code-Collab/server)
 
 ---
 
