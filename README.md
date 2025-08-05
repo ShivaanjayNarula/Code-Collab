@@ -246,7 +246,7 @@ The application will be available at:
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## 🙏 Acknowledgments
 
@@ -260,7 +260,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 If you encounter any issues or have questions, please:
-1. Check the [Issues](https://github.com/your-repo/issues) page
+1. Check the [Issues](https://github.com/ShivaanjayNarula/code-collab/issues) page
 2. Create a new issue with detailed information
 3. Contact the development team
 
