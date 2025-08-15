@@ -15,11 +15,6 @@
 - **Session Management:** Create, join, and manage collaborative spaces by unique links.
 - **Modern UI:** Responsive, beautiful interface with dark mode and custom components.
 
-## 🖼️ Screenshots
-
-Screenshots and demo images are available in the `public/` directory.
-
----
 
 ## 🛠️ Tech Stack
 
@@ -45,7 +40,7 @@ Screenshots and demo images are available in the `public/` directory.
 
 ## 🧑‍💻 Getting Started (Local Setup)
 
-This project consists of two codebases: **frontend** (this repo) and **backend**.
+This project consists of two codebases: **frontend** and **backend**.
 
 ### 1. Clone the repositories
 
