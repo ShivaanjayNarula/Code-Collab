@@ -2,7 +2,7 @@
 
 **Code-Collab** is a modern, real-time collaborative code editor built with Next.js, React, and Socket.io. It enables seamless pair programming, interview practice, and group coding sessions with live code sharing, multi-language support, and instant code execution.
 
-**Live Demo:** [https://code-collab-2025.vercel.app/](https://code-collab-2025.vercel.app)
+**Live Demo:** [https://code-collab-2025.vercel.app/](https://code-collab-2025.vercel.app/)
 
 ---
 
